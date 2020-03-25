@@ -1,0 +1,35 @@
+.greeting {
+  background-image: url("/image/background_greeting.png");
+  background-color: rgba(243, 243, 243, 0.15);
+}
+
+.greeting__info {
+  display: flex;
+  margin: 50px 110px 0 110px;
+  padding-bottom: 40px;
+}
+
+.greeting__title {
+  margin-left: 150px;
+  padding-top: 90px;
+}
+
+.greeting__text {
+  margin-right: 96px;
+  color: #2b2d36;
+  width: 600px;
+  font-weight: 400;
+}
+
+.main_principles {
+  width: 600px;
+  color: #2b2d36;
+}
+
+.main_principles__title {
+  font-weight: 500;
+}
+
+.greeting__list {
+  margin: 25px 0 25px 15px;
+}

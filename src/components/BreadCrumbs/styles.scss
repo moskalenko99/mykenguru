@@ -1,0 +1,21 @@
+$image_content: url("/image/content.svg");
+
+nav .breadcrumb {
+  background-color: white;
+  padding: 0;
+}
+
+.breadcrumb .breadcrumb-item a {
+  color: #68d6f4;
+}
+
+.breadcrumb .breadcrumb-item.active {
+  color: #2b2d36;
+}
+//:not(:first-child)
+body .breadcrumb .breadcrumb-item:not(:first-child)::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  color: #dfdfdf;
+  content: $image_content;
+}

@@ -1,0 +1,30 @@
+.Radio {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+
+  &__title {
+    margin-left: 5px;
+  }
+
+  .iconPath {
+    fill: none;
+    stroke: #dfdfdf;
+  }
+  &:hover .iconPath {
+    fill: none;
+    stroke: #572f8c;
+  }
+  &__flag:checked + svg .iconPath {
+    fill: #68d6f4;
+    stroke: none;
+  }
+  &__flag:checked ~ span {
+    color: #fd6d6d;
+    font-weight: 700;
+  }
+  &:hover &__flag:checked + svg .iconPath {
+    fill: #572f8c;
+    stroke: none;
+  }
+}

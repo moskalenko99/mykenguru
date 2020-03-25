@@ -1,0 +1,56 @@
+body .container_breadcrumb {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.view_product {
+  width: 100%;
+  display: flex;
+  margin: 25px 0;
+}
+
+.select_sort {
+  height: 40px;
+  margin-left: 40px;
+  background-color: white;
+  border: 1px solid #dfdfdf;
+  width: 264px;
+  border-radius: 5px;
+}
+
+.select_sort_count {
+  width: 70px;
+  margin-left: 15px;
+}
+
+.view {
+  margin-left: auto;
+}
+
+.grid_button,
+.list_button {
+  background: none;
+  border: none;
+  margin: 5px;
+}
+
+.grid {
+  cursor: pointer;
+  margin: 5px;
+}
+
+.list {
+  cursor: pointer;
+  margin: 5px;
+}
+
+.ListIcon,
+.GridIcon {
+  path {
+    fill: #dfdfdf;
+
+    &.active {
+      fill: #68d6f4;
+    }
+  }
+}
