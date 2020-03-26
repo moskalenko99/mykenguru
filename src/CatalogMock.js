@@ -4,16 +4,20 @@ const mockedData = [
     image: "image/product.png",
     rate: 2,
     in_stock: true,
-    reviews: [
+    comments: [
       {
         photo: "product1",
         name: "product1user1",
-        text: "product1user1"
+        text: "product1user1",
+        data: "21.03.2020",
+        rating: 2
       },
       {
         photo: "product1",
         name: "product2user2",
-        text: "product2user2"
+        text: "product2user2",
+        data: "21.03.2020",
+        rating: 2
       }
     ],
     delivery_period: 1,
@@ -27,23 +31,34 @@ const mockedData = [
       { weight: 15, price: 350, sale: 400 },
       { weight: 20, price: 325 }
     ],
-    priceUnit: "RUB"
+    priceUnit: "RUB",
+    description: {
+      manufacturer: "Grandorf",
+      taste: "белая рыба",
+      age: "взрослая кошка",
+      destination: "гипоаллергенный",
+      country: "Италия"
+    }
   },
   {
     id: 1,
     image: "image/product.png",
     rate: 4,
     in_stock: true,
-    reviews: [
+    comments: [
       {
         photo: "test",
         name: "test",
-        text: "test"
+        text: "test",
+        data: "21.03.2020",
+        rating: 2
       },
       {
         photo: "test2",
         name: "test2",
-        text: "test2"
+        text: "test2",
+        data: "21.03.2020",
+        rating: 2
       }
     ],
     delivery_period: 1,
@@ -64,16 +79,20 @@ const mockedData = [
     image: "image/product.png",
     rate: 5,
     in_stock: true,
-    reviews: [
+    comments: [
       {
         photo: "product2",
         name: "product2user1",
-        text: "product2user1"
+        text: "product2user1",
+        data: "21.03.2020",
+        rating: 2
       },
       {
         photo: "product2",
         name: "product2user2",
-        text: "product2user2"
+        text: "product2user2",
+        data: "21.03.2020",
+        rating: 2
       }
     ],
     delivery_period: 1,
@@ -94,16 +113,20 @@ const mockedData = [
     image: "image/product.png",
     rate: 0,
     in_stock: true,
-    reviews: [
+    comments: [
       {
         photo: "test",
         name: "test",
-        text: "test"
+        text: "test",
+        data: "21.03.2020",
+        rating: 2
       },
       {
         photo: "test2",
         name: "test2",
-        text: "test2"
+        text: "test2",
+        data: "21.03.2020",
+        rating: 2
       }
     ],
     delivery_period: 1,
@@ -124,16 +147,20 @@ const mockedData = [
     image: "image/product.png",
     rate: 2,
     in_stock: true,
-    reviews: [
+    comments: [
       {
         photo: "product3",
         name: "product3user1",
-        text: "product3user1"
+        text: "product3user1",
+        data: "21.03.2020",
+        rating: 2
       },
       {
         photo: "product3",
         name: "product3user2",
-        text: "product3user2"
+        text: "product3user2",
+        data: "21.03.2020",
+        rating: 2
       }
     ],
     delivery_period: 1,

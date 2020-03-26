@@ -1,7 +1,6 @@
 .product .product_item_list {
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03), 0px 2px 4px rgba(0, 0, 0, 0.06);
   border-radius: 7px;
-  margin-bottom: 20px;
   background-color: #fff;
   position: relative;
   margin-left: 40px;
@@ -88,6 +87,10 @@
   background-color: #68d6f4;
   border-radius: 7px;
   color: white;
+  &:hover {
+    background-color: #572f8c;
+    color: #ffffff;
+  }
 }
 
 .stock {

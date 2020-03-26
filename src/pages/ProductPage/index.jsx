@@ -23,7 +23,9 @@ class ProductPage extends Component {
       <React.Fragment>
         <Header />
         <div className="container">
-          <DetailsProduct data={Product} />
+          <div className="row">
+            <DetailsProduct data={Product} />
+          </div>
         </div>
         <Footer />
       </React.Fragment>

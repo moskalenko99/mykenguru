@@ -75,7 +75,9 @@ class Footer extends React.Component {
             </div>
           </div>
           <div className="footer__nav">
-            <div className="footer__title">кошки</div>
+            <Link to="catalog/cat">
+              <div className="footer__title">кошки</div>
+            </Link>
             {_.map(cat, (item, index) => (
               <div className="footer__link">
                 <Link to={index}>{item}</Link>
@@ -83,7 +85,9 @@ class Footer extends React.Component {
             ))}
           </div>
           <div className="footer__nav">
-            <div className="footer__title">собаки</div>
+            <Link to="catalog/dog">
+              <div className="footer__title">собаки</div>
+            </Link>
             {_.map(dog, (item, index) => (
               <div className="footer__link">
                 <Link to={index}>{item}</Link>
@@ -91,7 +95,9 @@ class Footer extends React.Component {
             ))}
           </div>
           <div className="footer__nav footer__other">
-            <div className="footer__title">другое</div>
+            <Link to="catalog/other">
+              <div className="footer__title">другое</div>
+            </Link>
             {_.map(animals, (item, index) => (
               <div className="footer__link">
                 <Link to={index}>{item}</Link>
@@ -99,7 +105,9 @@ class Footer extends React.Component {
             ))}
           </div>
           <div className="footer__nav footer__score">
-            <div className="footer__title">магазин</div>
+            <Link to="/">
+              <div className="footer__title">магазин</div>
+            </Link>
             {_.map(about, (item, index) => (
               <div className="footer__link">
                 <Link to={index}>{item}</Link>

@@ -1,0 +1,16 @@
+.product_tabs .product_tabs_description {
+  margin-top: 35px;
+  display: flex;
+  &_info {
+    display: flex;
+    &_item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin-top: auto;
+      &_dots {
+        margin-bottom: auto;
+      }
+    }
+  }
+}

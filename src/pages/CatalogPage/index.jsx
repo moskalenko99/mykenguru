@@ -24,6 +24,7 @@ const sortList = [
       return leftItem.id > rigthItem.id ? 1 : -1;
     }
   },
+
   {
     name: "Сортировка по новизне",
     sorter: (leftItem, rigthItem) => {
@@ -44,23 +45,17 @@ class CatalogPage extends Component {
     sort: 0,
     perPage: 10,
     page: 0
-    // ListFill: "#68d6f4",
-    // GridFill: "#dfdfdf"
   };
 
   handleClickGridView = () => {
     this.setState({
       ProductView: GridProducts
-      // GridFill: "#68d6f4",
-      // ListFill: "#dfdfdf"
     });
   };
 
   handleClickListView = () => {
     this.setState({
       ProductView: ListProducts
-      // ListFill: "#68d6f4",
-      // GridFill: "#dfdfdf"
     });
   };
 
@@ -69,7 +64,7 @@ class CatalogPage extends Component {
   };
 
   handleChangePerPage = e => {
-    this.setState({ perPage: +e.target.value });
+    this.setState({ perPage: +e.target.value, page: 0 });
   };
 
   handleCahngePage = e => {
@@ -149,11 +144,41 @@ class CatalogPage extends Component {
                   onChange={this.handleChangeSort}
                 >
                   {_.map(sortList, ({ name }, index) => (
-                    <option value={index} selected={this.state.sort === index}>
+                    <option
+                      value={index}
+                      select={this.state.sort === index ? "select" : null}
+                    >
                       {name}
                     </option>
                   ))}
                 </select>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                >
+                  <g>
+                    <g transform="rotate(-90 5 3.5)">
+                      <g transform="rotate(-90 5 3.5)">
+                        <path
+                          fill="#68d6f4"
+                          d="M.5 4.84l.562.514 3.443-3.06.367.326-.002-.001 3.06 2.718.57-.507-3.995-3.55L.5 4.84"
+                        />
+                        <path
+                          fill="none"
+                          stroke="#68d6f4"
+                          stroke-linecap="square"
+                          stroke-miterlimit="20"
+                          stroke-width="1.5"
+                          d="M.5 4.84v0l.562.514v0l3.443-3.06v0l.367.326v0L4.87 2.62v0l3.06 2.718v0l.57-.507v0L4.505 1.28v0L.5 4.84v0"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div className="sort">
                 <select
                   className="select_sort select_sort_count"
                   onChange={this.handleChangePerPage}
@@ -167,6 +192,31 @@ class CatalogPage extends Component {
                     </option>
                   ))}
                 </select>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                >
+                  <g>
+                    <g transform="rotate(-90 5 3.5)">
+                      <g transform="rotate(-90 5 3.5)">
+                        <path
+                          fill="#68d6f4"
+                          d="M.5 4.84l.562.514 3.443-3.06.367.326-.002-.001 3.06 2.718.57-.507-3.995-3.55L.5 4.84"
+                        />
+                        <path
+                          fill="none"
+                          stroke="#68d6f4"
+                          stroke-linecap="square"
+                          stroke-miterlimit="20"
+                          stroke-width="1.5"
+                          d="M.5 4.84v0l.562.514v0l3.443-3.06v0l.367.326v0L4.87 2.62v0l3.06 2.718v0l.57-.507v0L4.505 1.28v0L.5 4.84v0"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
               </div>
               <div className="view">
                 <label className="grid" onClick={this.handleClickGridView}>
@@ -185,13 +235,21 @@ class CatalogPage extends Component {
           </div>
         </div>
 
-        <nav className="nav_page">
-          {_.map(pages, (_p, index) => (
-            <button value={index} onClick={this.handleCahngePage}>
-              {index + 1}
-            </button>
-          ))}
-        </nav>
+        <div className="nav">
+          <nav className="nav_page">
+            {_.size(pages) > 1
+              ? _.map(pages, (_p, index) => (
+                  <button
+                    value={index}
+                    onClick={this.handleCahngePage}
+                    className="nav_page_button"
+                  >
+                    {index + 1}
+                  </button>
+                ))
+              : null}
+          </nav>
+        </div>
 
         <Greeting />
 
